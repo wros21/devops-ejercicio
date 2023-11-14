@@ -25,4 +25,4 @@ Resources:
 Outputs:
   endpoint:
     Description: 'API Gateway endpoint URL for the Lambda function'
-    Value: !Sub 'https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/dev/api-http'
+    Value: !Sub 'https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/dev/api-publico'

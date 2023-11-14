@@ -31,7 +31,7 @@ jobs:
     - name: Run SAM Deploy
       run: |
         sam deploy \
-        --code-file code.yml \
+        --template-file template.yml \
         --resolve-s3 \
         --stack-name sam-stack \
         --capabilities CAPABILITY_IAM \

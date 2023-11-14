@@ -6,14 +6,14 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: .
-      Handler: api-http.lambda_handler
-      FunctionName: api-http
+      Handler: api-publico.lambda_handler
+      FunctionName: api-publico
       Runtime: python3.10
       Events:
         ApiGateway:
           Type: HttpApi
           Properties:
-            Path: /api-http
+            Path: /api-publico
             Method: GET
             ApiId: !Ref ApiGateway
 

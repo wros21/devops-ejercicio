@@ -6,14 +6,14 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: .
-      Handler: api-publico.lambda_handler
-      FunctionName: api-publico
+      Handler: api-http.lambda_handler
+      FunctionName: api-http
       Runtime: python3.10
       Events:
         ApiGateway:
           Type: HttpApi
           Properties:
-            Path: /api-publico
+            Path: /api-http
             Method: GET
             ApiId: !Ref ApiGateway
 
@@ -25,4 +25,4 @@ Resources:
 Outputs:
   endpoint:
     Description: 'API Gateway endpoint URL for the Lambda function'
-    Value: !Sub 'https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/dev/api-publico'
+    Value: !Sub 'https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/dev/api-http'
